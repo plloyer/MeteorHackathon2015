@@ -1,0 +1,140 @@
+header {
+    top: -20px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #fff;
+    background-image: url(/banner.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+}
+
+@media(min-width:768px) {
+    header {
+        height: 100%;
+        max-height: 1200px;
+    }
+    header .header-content {
+        position: relative;
+        width: 100%;
+        padding: 300px 0;
+        text-align: center;
+    }
+}
+
+.loginBackground {
+    z-index: 0;
+    background-color: #222;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    margin-top: -20px;
+}
+
+.noPadding {
+    padding: 0;
+}
+
+.loginBannerOverlay {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    background: #212121;
+    background: rgba(33, 33, 33, 0.3);
+}
+
+.loginBannerTitle {
+    color: #fff;
+    font-family: ThreeDumb;
+    font-size: 5em;
+    text-shadow: 2px 2px 3px rgba(230, 230, 230, 0.5);
+    z-index: 200;
+}
+
+.loginBannerTag {
+    border-style: solid;
+    border-radius: 0.3em;
+    border-width: 1px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.5em;
+    padding: 0 0.3em;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #400;
+    background-color: #645050;
+    background-color: rgba(100, 80, 80, 0.7);
+    top: 0.35em;
+    left: -1.8em;
+    -o-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    /* IE 9 */
+    -moz-transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    /* Safari */
+    transform: rotate(-20deg);
+}
+
+.loginBannerDesc {
+    color: #ddd;
+    font-family: "Tahoma";
+    font-size: 3em;
+    text-shadow: 0 0 3px rgba(230, 230, 230, 0.7);
+}
+
+.loginContainer {
+    margin-top: 800px;
+    color: #CDCDCD;
+}
+
+@media screen and (max-width: 768px) {
+    .loginBannerDesc {
+        font-size: 2em;
+    }
+    .loginBannerTitle {
+        font-size: 4em;
+    }
+    .loginBannerTag {
+        font-size: 0.75em;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .loginBannerTitle {
+        font-size: 3em;
+    }
+    .loginBannerTag {
+        font-size: 0.5em;
+    }
+}
+
+.bg-dark {
+    color: #fff;
+    background-color: #222;
+}
+
+section {
+    padding: 50px 0;
+}
+
+.sectionDivider {
+    padding: 50px 0;
+}

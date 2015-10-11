@@ -1,3 +1,78 @@
 <template name="login">
-    Login!!
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <div class="container-fluid noPadding">
+                    <div class="row loginBannerOverlay">
+                        <div class="col-sm-12 text-center">
+                            <h1 class="loginBannerTitle">
+                              <span class="loginBannerTitleText">
+                                {{i18n 'AppName'}}
+                              </span>
+                              <div class="loginBannerTag">
+                                {{i18n 'NavbarTitleTag'}}
+                              </div>
+                            </h1>
+                            <h3 class="loginBannerDesc">{{i18n 'AppDescription'}}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Your things, connected !</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-tachometer wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i>
+                        <h3>Dashboard</h3>
+                        <p class="">Create your customized dashboard that match your things.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-cloud wow bounceIn text-primary" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: bounceIn;"></i>
+                        <h3>Cloud-based</h3>
+                        <p class="">Keep your data on the cloud, accessible from everywhere!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-mobile wow bounceIn text-primary" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: bounceIn;"></i>
+                        <h3>Mobile friendly</h3>
+                        <p class="">We all love our phones and we are working hard to make sure everything works with them, even with some extra features <i class="fa fa-smile-o"></i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <br>
+                <br>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Have an idea?</h2>
+                    <hr class="primary">
+                    <p>We are always looking for suggestions and improvements. If you feel like there is something missing, I'd love to know!</p>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <i class="fa fa-commenting fa-3x wow bounceIn" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;"></i>
+                    <p> </p>
+                    <p><i class="fa fa-twitter wow bounceIn text-primary" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: bounceIn;"></i> @pierrelucloyer</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>

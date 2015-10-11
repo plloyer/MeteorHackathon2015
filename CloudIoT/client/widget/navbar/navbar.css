@@ -1,0 +1,33 @@
+.NavbarTitle{
+    font-family: ThreeDumb;
+    font-size: 1.9em;
+    color:#FFF;
+}
+
+.NavbarTitleTag{
+    border-style: solid;
+    border-radius: 0.3em;
+    border-width:1px;
+    font-size: 0.7em;
+    padding: 0 0.3em;
+    
+    position:relative;
+    display:inline-block;
+    text-transform: uppercase;
+    
+    color:#A66;
+    
+    top:-0.4em;
+    left:-0.3em;
+    
+    -o-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg); /* IE 9 */
+    -moz-transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg); /* Safari */
+    transform: rotate(-15deg);
+}
+
+.NavbarLang{
+    padding: 15px 15px;
+    line-height: 20px;
+}

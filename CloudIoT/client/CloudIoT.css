@@ -1,3 +1,23 @@
 body {
     padding-top: 70px;
 }
+
+@font-face {
+    font-family: ThreeDumb;
+    src: url(/3Dumb.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: cubicblock_d;
+    src: url(/cubicblock_d.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: NEUROTOX;
+    src: url(/NEUROTOX.TTF) format('truetype');
+}
+
+@font-face {
+    font-family: V5PRF;
+    src: url(/V5PRF___.TTF) format('truetype');
+}
