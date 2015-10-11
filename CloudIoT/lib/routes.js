@@ -6,4 +6,7 @@ Router.configure({
 Router.route('/', {
     name: 'main',
     template: 'main',
+    waitOn: function () {
+        return [Meteor.subscribe('Feed'), Meteor.subscribe('FeedData')];
+    }
 });
