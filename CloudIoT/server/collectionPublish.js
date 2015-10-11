@@ -3,8 +3,8 @@ Meteor.publish("Feed", function () {
     return Feed.find({});
 });
 
-Meteor.publish("FeedData", function () {
-    return FeedData.find({});
+Meteor.publish("FeedData", function (feedId) {
+    return FeedData.find({ 'feedId': feedId }, { sort: { $natural: -1 }, limit: 100 });
 });
 
 Meteor.publish("UserFeed", function () {

@@ -1,5 +1,46 @@
 <template name="feed">
-    Feed {{_id}}
-    <div id={{_id}} class="ct-chart ct-golden-section"></div>
-    {{invokeAfterLoad}}
+	<div class="col-lg-4 col-md-6 col-sm-12">
+	    {{#if isOwner}}
+			<div class="row">
+	        	{{#if isEditMode}}
+					<div class="col-md-4">
+						<input id="inputEditFeed_{{_id}}" class="doEditFeed form-control" type="text" placeholder="Name..." value="{{name}}" autofocus>
+					</div>
+					<div class="col-md-5">
+					type/range
+					</div>
+					<div class="col-md-3">
+					    <button class="btn btn-primary btn-sm doEditFeed">
+					    	<span class="glyphicon glyphicon-ok-sign"></span>
+					    </button>
+					    <button class="btn btn-danger btn-sm cancelEditFeed">
+					    	<span class="glyphicon glyphicon-remove-sign"></span>
+					    </button>
+					</div>
+			    {{else}}
+					<div class="col-xs-10">
+	    				<abbr title="{{_id}}">{{getName}}</abbr> 
+	    			</div>
+					<div class="col-xs-2">
+			    		<button class="btn btn-primary btn-sm editFeed" feedId="{{_id}}">
+					    	<span class="glyphicon glyphicon-wrench"></span>
+					    </button>
+					</div>
+			    {{/if}}
+			</div>
+		{{else}}
+	    	<abbr title="{{_id}}">{{getName}}</abbr> 
+	    {{/if}}
+
+	    <div id={{_id}} class="ct-chart ct-golden-section"></div>
+	    {{invokeAfterLoad}}
+    </div>
+</template>
+
+<template name="FeedErrors">
+  {{#if errors}}
+    {{#with errors}}
+      {{>messagesList}}
+    {{/with}}
+  {{/if}}
 </template>

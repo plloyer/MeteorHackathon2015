@@ -1,9 +1,15 @@
 <template name="feedList">
     <div style="width: 100%;">
-        {{#each feed}}
-            <button type="button" class="feed-select btn btn-default {{active}}" data-toggle="button" style="padding: 0px; width:55px; height:55px" >
-                {{{htmlIcon}}}
-            </button>
-        {{/each}}
+    	<dl class="dl-horizontal">
+		 	<dt>Available sensors</dt>
+			<dd>
+		        {{#each feed}}
+		            <button type="button" class="feed-select btn btn-default {{active}}" data-toggle="button" style="padding: 0px; width:55px; height:55px" >
+		                {{{htmlIcon}}}
+		            </button>
+		        {{/each}}
+	        </dd>
+	    </dl>
+	    {{> FeedErrors}}
     </div>
 </template>

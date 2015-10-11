@@ -12,10 +12,12 @@ Meteor.methods({
         doc = Feed.findOne({ 'clientId': session.uuid, 'sensorId': sensorId });
         if (doc) {
             validateData(doc.feedType === feedType, 1000);
+            validateData(doc.owner === session.userId, 1001);
         }
         else {
             doc = Feed.insert({
                 'clientId': session.uuid,
+                'owner': session.userId,
                 'sensorId': sensorId,
                 'feedType': feedType
             });
@@ -27,10 +29,11 @@ Meteor.methods({
         return response;
     },
 
-    feedData: function (sessionKey, feedId, feedData) {
+    feedData: function (sessionKey, feedId, feedData, timestamp) {
         check(sessionKey, Number);
         check(feedId, String);
         check(feedData, String);
+        check(timestamp, Number);
 
         console.log("'FeedData()': sessionKey: ..., feedId: " + feedId + ", feedData: " + feedData);
 
@@ -38,11 +41,12 @@ Meteor.methods({
         validateData(session !== null, 403);
 
         doc = Feed.findOne({ '_id': feedId }, { _id: 1, feedId: 0, feedData: 0, time: 0 });
+        validateData((doc.owner === session.userId), 1001);
         if (doc) {
             FeedData.insert({
                 'feedId': feedId,
                 'feedData': feedData,
-                'time': Date.now()
+                'time': timestamp
             });
         }
         else {

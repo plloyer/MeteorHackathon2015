@@ -7,7 +7,7 @@ Router.route('/', {
     name: 'main',
     template: 'main',
     waitOn: function () {
-        return [Meteor.subscribe('Feed'), Meteor.subscribe('FeedData'), Meteor.subscribe('UserFeed')];
+        return [Meteor.subscribe('Feed'), Meteor.subscribe('UserFeed')];
     }
 });
 
