@@ -6,3 +6,7 @@ Meteor.publish("Feed", function () {
 Meteor.publish("FeedData", function () {
     return FeedData.find({});
 });
+
+Meteor.publish("UserFeed", function () {
+    return UserFeed.find({ 'userId': this.userId });
+});

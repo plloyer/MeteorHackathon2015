@@ -1,5 +1,6 @@
 <template name="main">
-    {{#each feeds}}
-        {{>feed}}
+    {{> feedList}}
+    {{#each activeFeed}}
+        {{> feed}}
     {{/each}}
 </template>

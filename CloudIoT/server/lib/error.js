@@ -1,4 +1,6 @@
 errorCodes = {
+	403: "Forbidden: You don't have tha autorization to do this action",
+
     1000: "",
 
     2000: "Session: invalid user id",

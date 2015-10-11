@@ -1,5 +1,15 @@
 Template.main.helpers({
-    feeds: function() {
-        return Feed.find({}, {_id:1, clientId:0, sensorId:0, feedType:0})
+    activeFeed: function () {
+        userFeedCursor = UserFeed.find(
+            { 'userId': Meteor.userId(), 'active': true },
+            { _id: 0, feedId: 1, userId: 0, active: 0 }
+            );
+
+        var activeFeedIdArray = [];
+        userFeedCursor.forEach(function (userFeed) {
+            activeFeedIdArray.push(userFeed.feedId);
+        });
+
+        return Feed.find({ '_id': { $in: activeFeedIdArray } });
     }
 });

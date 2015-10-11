@@ -3,7 +3,6 @@ Template.feed.helpers({
         var feed = this;
         Meteor.defer(function () {
             Tracker.autorun(function () {
-                console.log("showGraph for: " + feed._id);
                 var feedDataCursor = FeedData.find({ 'feedId': feed._id }/*, { sort: { createdAt: -1 }, limit: 50 }*/);
                 feedDataArray = feedDataCursor.map(function (doc) { return doc.feedData; });
 
@@ -30,7 +29,9 @@ Template.feed.helpers({
                     else {
 
                         var options = {
-                            fullWidth: true,
+                            showArea: true,
+                            showLine: true,
+                            showPoint: false,
                             charPadding: { right: 40 }
                         };
                         feed._myTestChart = new Chartist.Line('#' + feed._id, data, options);

@@ -1,0 +1,35 @@
+<template name="userProfile">
+	{{#if valid}}
+		<div class="row">
+			<div class="col-md-3 text-center">
+				<span class="fa-stack fa-5x">
+				  <i class="fa fa-square fa-stack-2x"></i>
+				  <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+				</span>
+			</div>
+			<div class="col-md-9">
+				<br/>
+				<dl class="dl-horizontal">
+				 	<dt>User</dt>
+  				  	<dd>{{userName}}</dd>
+					
+					<br/>
+				 	
+				 	<dt>User ID</dt>
+  				  	<dd>{{userId}}</dd>
+
+				 	<dt><abbr title="Secret key allow you to connect a sensor to Cloud IoT, please check the documentation for details on how to do this.">SecretKey</abbr></dt>
+  				  	<dd>
+  				  		{{#if showSecret}}
+						    {{secret}}
+						{{else}}
+							<button class="btn showSecret"><i class="fa fa-user-secret"></i> Show Secret</button>
+						{{/if}}
+					</dd>
+				</dl>
+			</div>
+		</div>
+	{{else}}
+	    You need to be logged-in to see this page.
+	{{/if}}
+</template>
