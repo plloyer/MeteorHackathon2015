@@ -15,7 +15,7 @@
 <template name="AppLayout">
     {{> NavBar}} 
     {{#if currentUser}}
-    <div class="container" id="main" style="height: 100%;">
+    <div class="container-fluid" id="main" style="height: 100%;">
         {{> yield}}
     </div>
     {{else}} 
