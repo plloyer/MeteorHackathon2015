@@ -29,7 +29,7 @@ Template.feedList.helpers({
     },
 
     htmlIcon: function () {
-        if (this.feedType == "F".charCodeAt(0)) {
+        if (this.feedType == "F".charCodeAt(0) || this.feedType == "M".charCodeAt(0)) {
             return '<i class="fa fa-laptop fa-3x"></i>';
         }
         else if (this.feedType == "P".charCodeAt(0)) {

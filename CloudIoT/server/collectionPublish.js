@@ -4,7 +4,7 @@ Meteor.publish("Feed", function () {
 });
 
 Meteor.publish("FeedData", function (feedId) {
-    return FeedData.find({ 'feedId': feedId }, { sort: { $natural: -1 }, limit: 100 });
+    return FeedData.find({ 'feedId': feedId }, { sort: { time: -1 }, limit: 100 });
 });
 
 Meteor.publish("UserFeed", function () {
