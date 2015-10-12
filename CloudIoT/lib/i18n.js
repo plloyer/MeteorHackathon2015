@@ -29,6 +29,6 @@ i18n.map('en', {
   AppName: 'Cloud IoT',
   NavbarTitleTag: 'alpha',
   SupportEmail: 'info@notdone.com',
-  AppDescription: 'Monitor all you connected devices !',
+  AppDescription: 'Monitor all your connected devices !',
   
 });
